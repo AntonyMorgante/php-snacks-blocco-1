@@ -14,21 +14,15 @@
 </head>
 <body>
     <?php
-        if (strlen($name)>3){
-            if (is_numeric($age)){
-                if ((strpos($mail, '.') !== false) && (strpos($mail, '@') !== false)){
-                    echo "Accesso riuscito!";
-                }
-                else {
-                    echo "Accesso negato!";
-                }
-            }
-            else {
-                echo "Accesso negato!";
-            }
+        if ((strlen($name)>3)
+         && (is_numeric($age)) 
+         && (strpos($mail, '.') !== false) 
+         && (strpos($mail, '@') !== false)){
+            echo "Accesso riuscito!";
         } else {
             echo "Accesso negato!";
-        }
+                }
+
     ?>
 </body>
 </html>
